@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data API</title>
+    <style>
+        /* Основной стиль страницы */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Заголовок */
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            font-size: 2em;
+        }
+
+        /* Основной контейнер */
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Стили для параграфов */
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* Ссылки */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Стили для блока данных */
+        .data-block {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Weather Data API</h1>
+    <div class="container">
+        <p>Welcome to the Weather Data API documentation. Below you can find the URL formats to access weather data:</p>
+
+        <p><strong>1. URL for the station on a specific date:</strong></p>
+        <div class="data-block">
+            http://127.0.0.1:5000/api/v1/10/2003-01-23
+        </div>
+
+        <p><strong>2. URL for the station over the entire period:</strong></p>
+        <div class="data-block">
+            http://127.0.0.1:5000/api/v1/10/
+        </div>
+
+        <p><strong>3. URL for the station's annual data:</strong></p>
+        <div class="data-block">
+            http://127.0.0.1:5000/api/v1/annual/10/2003
+        </div>
+
+        <p>Below, you'll find the data returned by the API:</p>
+        <div class="data-block">
+            {{data|safe}}
+        </div>
+    </div>
+</body>
+
+</html>
